@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cierres y Herrajes Mary</title>
+  <meta name="description" content="Catálogo de cremalleras, deslizadores, herrajes y más para marroquinería.">
+  <meta name="theme-color" content="#C4141A">
+  <link rel="icon" type="image/png" href="img/logo/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar" href="#vista">Ir al contenido</a>
+
+  <header class="cabecera">
+    <div class="cabecera__fila">
+      <a class="marca" href="#/" aria-label="Cierres y Herrajes Mary, ir al inicio">
+        <img src="img/logo/logo-192.png" alt="" width="60" height="60">
+        <span class="marca__texto">
+          <span class="marca__linea">Cierres y Herrajes</span>
+          <span class="marca__nombre">Mary</span>
+        </span>
+      </a>
+
+      <div class="buscador" role="search">
+        <label class="visible-lector" for="q">Buscar productos</label>
+        <input id="q" type="search" placeholder="Busca una referencia o marca" autocomplete="off"
+               role="combobox" aria-expanded="false" aria-controls="resultados">
+        <ul id="resultados" class="buscador__lista" role="listbox" hidden></ul>
+      </div>
+    </div>
+    <div class="cremallera" aria-hidden="true"><span class="cremallera__corredera"></span></div>
+  </header>
+
+  <main id="vista" class="contenedor" tabindex="-1" aria-live="polite">
+    <p class="estado">Cargando catálogo…</p>
+  </main>
+
+  <footer class="pie" id="pie"></footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

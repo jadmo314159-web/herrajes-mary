@@ -1,0 +1,64 @@
+/* Colores tomados del logo: rojo en degradado radial + blanco */
+:root {
+  --rojo:        #C4141A;  /* color principal del botón del logo */
+  --rojo-vivo:   #E0161C;  /* centro brillante del degradado */
+  --rojo-hondo:  #A10F14;  /* hover y estados activos */
+  --vino:        #7A0C0C;  /* borde oscuro del logo */
+  --tinta:       #2A0B0D;  /* texto principal */
+  --tinta-suave: #6B4E50;  /* texto secundario */
+  --papel:       #FAF7F7;  /* fondo de página */
+  --linea:       #E9DCDC;  /* bordes suaves */
+  --blanco:      #FFFFFF;
+
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:  "Montserrat", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --radio-sm: 8px;
+  --radio-md: 14px;
+  --radio-pill: 999px;
+  --ancho: 1120px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--tinta);
+  background: var(--papel);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+button, input { font: inherit; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+h2 { font-size: clamp(1.3rem, 2.5vw, 1.6rem); }
+
+:focus-visible { outline: 3px solid var(--rojo); outline-offset: 3px; border-radius: 4px; }
+.cabecera :focus-visible { outline-color: var(--blanco); }
+
+.contenedor { width: min(100% - 2rem, var(--ancho)); margin-inline: auto; padding-block: 2rem 4rem; flex: 1; }
+
+.visible-lector {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+.saltar {
+  position: absolute; left: 1rem; top: -4rem; background: var(--blanco); color: var(--rojo);
+  padding: .6rem 1rem; border-radius: var(--radio-sm); z-index: 100; font-weight: 600;
+}
+.saltar:focus { top: 1rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

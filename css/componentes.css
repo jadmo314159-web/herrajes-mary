@@ -1,0 +1,200 @@
+/* ===== Cabecera ===== */
+.cabecera {
+  background: radial-gradient(120% 220% at 50% 0%, var(--rojo-vivo) 0%, var(--rojo) 55%, var(--vino) 100%);
+  color: var(--blanco);
+  position: sticky; top: 0; z-index: 20;
+  box-shadow: 0 4px 18px rgba(122, 12, 12, .25);
+}
+.cabecera__fila {
+  width: min(100% - 2rem, var(--ancho)); margin-inline: auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem 2rem;
+  padding-block: .7rem; flex-wrap: wrap;
+}
+.marca { display: flex; align-items: center; gap: .8rem; text-decoration: none; }
+.marca img { border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+.marca__texto { display: flex; flex-direction: column; line-height: 1; }
+.marca__linea { font-size: .8rem; font-weight: 600; letter-spacing: .02em; }
+.marca__nombre { font-size: 1.9rem; font-weight: 800; letter-spacing: .04em; }
+
+/* La cremallera: dientes alternados sobre vino, con un deslizador que avanza al hacer scroll */
+.cremallera {
+  position: relative; height: 12px; background-color: var(--vino);
+  background-image:
+    repeating-linear-gradient(90deg, var(--blanco) 0 6px, transparent 6px 12px),
+    repeating-linear-gradient(90deg, transparent 0 6px, var(--blanco) 6px 12px);
+  background-size: 100% 6px, 100% 6px;
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+}
+.cremallera__corredera {
+  position: absolute; top: -3px; left: 0; width: 34px; height: 18px;
+  background: var(--blanco); border-radius: 4px 9px 9px 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.35);
+}
+@supports (animation-timeline: scroll()) {
+  .cremallera__corredera { animation: correr linear both; animation-timeline: scroll(root); }
+  @keyframes correr { to { left: calc(100% - 34px); } }
+}
+
+/* ===== Buscador ===== */
+.buscador { position: relative; flex: 1 1 320px; max-width: 520px; }
+.buscador input {
+  width: 100%; padding: .75rem 1.2rem; border: 0; border-radius: var(--radio-pill);
+  background: var(--blanco); color: var(--tinta); box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+.buscador input::placeholder { color: var(--tinta-suave); }
+.buscador__lista {
+  position: absolute; top: calc(100% + .5rem); left: 0; right: 0; list-style: none; padding: .4rem;
+  background: var(--blanco); color: var(--tinta); border-radius: var(--radio-md);
+  box-shadow: 0 12px 30px rgba(42,11,13,.25); max-height: 60vh; overflow-y: auto;
+}
+.buscador__lista a { display: block; padding: .6rem .8rem; border-radius: var(--radio-sm); text-decoration: none; }
+.buscador__lista a:hover, .buscador__lista a[aria-selected="true"] { background: var(--papel); }
+.buscador__titulo { font-weight: 600; }
+.buscador__camino { display: block; font-size: .8rem; color: var(--tinta-suave); }
+.buscador__vacio { padding: .8rem; color: var(--tinta-suave); }
+
+/* ===== Navegación y títulos ===== */
+.migas { display: flex; flex-wrap: wrap; gap: .3rem .6rem; font-size: .875rem; color: var(--tinta-suave); margin-bottom: 1rem; }
+.migas a { color: var(--rojo); text-decoration: none; font-weight: 600; }
+.migas a:hover { text-decoration: underline; }
+.migas span[aria-hidden] { color: var(--linea); }
+.titulo-vista { margin-bottom: .4rem; }
+.subtitulo { color: var(--tinta-suave); max-width: 60ch; margin-bottom: 2rem; }
+
+/* ===== Tarjetas (categorías, materiales, marcas) ===== */
+.rejilla { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); list-style: none; padding: 0; }
+.tarjeta {
+  display: flex; flex-direction: column; text-decoration: none; overflow: hidden;
+  background: var(--blanco); border: 1px solid var(--linea); border-radius: var(--radio-md);
+  transition: border-color .15s, box-shadow .15s;
+}
+.tarjeta:hover { border-color: var(--rojo); box-shadow: 0 8px 22px rgba(196, 20, 26, .14); }
+.tarjeta__nombre { padding: .9rem 1rem 1rem; font-family: var(--serif); font-size: 1.15rem; font-weight: 700; }
+.tarjeta--marca .foto { background: var(--blanco); padding: 1.2rem; }
+.tarjeta--marca .foto img { object-fit: contain; }
+
+/* Foto con relleno de respaldo: el degradado del logo con la inicial */
+.foto { position: relative; aspect-ratio: 4 / 3; overflow: hidden; display: grid; place-items: center; }
+.foto img { width: 100%; height: 100%; object-fit: cover; }
+.sin-foto {
+  background: radial-gradient(circle at 50% 40%, var(--rojo-vivo), var(--rojo) 55%, var(--vino));
+  color: var(--blanco); font-family: var(--serif); font-size: 3rem; font-weight: 700;
+}
+.sin-foto small { font-family: var(--sans); font-size: .75rem; font-weight: 500; opacity: .85; position: absolute; bottom: .5rem; }
+
+/* ===== Referencias ===== */
+.referencia {
+  background: var(--blanco); border: 1px solid var(--linea); border-radius: var(--radio-md);
+  padding: 1.25rem; margin-bottom: 1.5rem; scroll-margin-top: 7rem;
+}
+.referencia.resaltada { outline: 3px solid var(--rojo); outline-offset: 3px; }
+.referencia__cabeza { display: flex; align-items: center; gap: .9rem; margin-bottom: 1rem; }
+.referencia__num {
+  flex: none; min-width: 3rem; height: 3rem; padding-inline: .5rem; display: grid; place-items: center;
+  border-radius: var(--radio-pill); color: var(--blanco); font-weight: 800;
+  background: radial-gradient(circle at 50% 35%, var(--rojo-vivo), var(--rojo) 60%, var(--vino));
+}
+.carrusel {
+  display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .6rem;
+  scrollbar-width: thin; scrollbar-color: var(--rojo) var(--linea);
+}
+.carrusel .foto { flex: none; width: min(240px, 70%); scroll-snap-align: start; border-radius: var(--radio-sm); }
+.referencia__texto { margin-top: .9rem; color: var(--tinta-suave); max-width: 70ch; }
+
+.estado { color: var(--tinta-suave); padding: 2rem 0; }
+.estado a { color: var(--rojo); font-weight: 600; }
+
+@media (max-width: 600px) {
+  .rejilla { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+  .tarjeta__nombre { font-size: 1rem; padding: .7rem .8rem .8rem; }
+  .marca__nombre { font-size: 1.5rem; }
+  .buscador { flex-basis: 100%; max-width: none; }
+}
+
+/* ===== Volver ===== */
+.barra-nav { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.2rem; margin-bottom: 1.5rem; }
+.barra-nav .migas { margin: 0; }
+.volver {
+  display: inline-flex; align-items: center; gap: .5rem; padding: .5rem 1.1rem .5rem .8rem;
+  border: 1.5px solid var(--rojo); border-radius: var(--radio-pill); background: var(--blanco);
+  color: var(--rojo); font-weight: 600; font-size: .9rem; text-decoration: none;
+}
+.volver::before {
+  content: ""; width: .5em; height: .5em; margin-left: .25em;
+  border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg);
+}
+.volver:hover { background: var(--rojo); color: var(--blanco); }
+.titulo-vista { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+
+/* ===== Misión y visión ===== */
+.identidad { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 2rem; }
+.identidad__item { background: var(--blanco); border: 1px solid var(--linea); border-left: 6px solid var(--rojo); border-radius: var(--radio-md); padding: 1.4rem 1.5rem; }
+.identidad__item h2 { margin-bottom: .5rem; }
+.identidad__item p { color: var(--tinta-suave); max-width: 60ch; }
+
+/* ===== Banner que pasa solo ===== */
+.banner { position: relative; overflow: hidden; border-radius: var(--radio-md); aspect-ratio: 16 / 6; min-height: 200px; margin-bottom: 3rem; background: var(--vino); }
+.banner__slide { position: absolute; inset: 0; opacity: 0; transition: opacity .8s ease; }
+.banner__slide.activo { opacity: 1; }
+.banner__slide .foto { aspect-ratio: auto; width: 100%; height: 100%; }
+.banner__texto {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 3rem 1.5rem 1.3rem; color: var(--blanco);
+  font-family: var(--serif); font-weight: 700; font-size: clamp(1.1rem, 3vw, 1.8rem);
+  background: linear-gradient(transparent, rgba(42, 11, 13, .8));
+}
+.banner__mando { position: absolute; right: .8rem; bottom: .7rem; display: flex; align-items: center; gap: .2rem; }
+.banner__punto { position: relative; width: 24px; height: 24px; border: 0; background: none; cursor: pointer; }
+.banner__punto::after { content: ""; position: absolute; inset: 7px; border-radius: 50%; border: 2px solid var(--blanco); }
+.banner__punto[aria-current="true"]::after { background: var(--blanco); }
+.banner__pausa {
+  margin-left: .4rem; padding: .25rem .8rem; border: 1.5px solid var(--blanco); border-radius: var(--radio-pill);
+  background: rgba(42, 11, 13, .55); color: var(--blanco); font-size: .8rem; font-weight: 600; cursor: pointer;
+}
+.banner :focus-visible { outline-color: var(--blanco); }
+
+/* ===== WhatsApp ===== */
+.btn-whatsapp {
+  display: inline-flex; align-items: center; gap: .55rem; margin-top: 1rem; padding: .7rem 1.25rem;
+  border-radius: var(--radio-pill); background: #18804A; color: var(--blanco);
+  font-weight: 600; font-size: .95rem; text-decoration: none;
+}
+.btn-whatsapp:hover { background: #126538; }
+
+/* ===== Pie: redes y ubicación ===== */
+.pie { background: var(--tinta); color: var(--blanco); margin-top: 2rem; }
+.pie__fila {
+  width: min(100% - 2rem, var(--ancho)); margin-inline: auto; padding-block: 2.5rem;
+  display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.pie__bloque h2 { font-size: 1.15rem; margin-bottom: .7rem; }
+.pie__bloque p { color: #E7D6D6; margin-bottom: .4rem; }
+.pie__marca { display: flex; align-items: center; gap: .7rem; margin-bottom: .7rem; }
+.pie__marca img { border-radius: 50%; }
+.redes { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.redes a, .pie__enlace { display: inline-block; padding: .4rem 1rem; border: 1.5px solid #E7D6D6; border-radius: var(--radio-pill); text-decoration: none; font-size: .9rem; font-weight: 600; }
+.redes a:hover, .pie__enlace:hover { background: var(--blanco); color: var(--tinta); }
+.pie :focus-visible { outline-color: var(--blanco); }
+.pie__mapa { min-height: 180px; border-radius: var(--radio-md); overflow: hidden; display: grid; place-items: center; border: 1.5px dashed #8A6A6C; text-align: center; padding: .5rem; }
+.pie__mapa iframe { width: 100%; height: 100%; min-height: 220px; border: 0; }
+.pie__legal { text-align: center; padding: 1rem; font-size: .8rem; color: #C9B1B2; border-top: 1px solid rgba(255, 255, 255, .12); }
+
+/* ===== Ajustes para celular ===== */
+@media (max-width: 600px) {
+  .contenedor { padding-block: 1.25rem 3rem; }
+  .cabecera { position: static; }                 /* libera pantalla: el buscador queda arriba, no flotando */
+  .cabecera__fila { gap: .6rem; padding-block: .6rem; }
+  .barra-nav { gap: .5rem; margin-bottom: 1.1rem; }
+  .volver { min-height: 44px; }                   /* tamaño cómodo para el dedo */
+  .btn-whatsapp { display: flex; justify-content: center; width: 100%; min-height: 48px; }
+  .banner { aspect-ratio: 4 / 3; min-height: 0; margin-bottom: 2rem; }
+  .identidad { margin-bottom: 1.5rem; }
+  .referencia { padding: 1rem; }
+  .carrusel .foto { width: 78%; }
+  .redes a, .pie__enlace { min-height: 44px; display: inline-flex; align-items: center; }
+  .pie__fila { padding-block: 2rem; }
+}
+@media (max-width: 600px) {
+  .banner__texto { padding: 1rem 1rem 3rem; font-size: 1rem; }   /* el texto queda sobre los controles, sin taparse */
+  .banner__mando { left: 0; right: 0; bottom: .5rem; justify-content: center; }
+}

@@ -1,0 +1,38 @@
+{
+  "whatsapp": "3117509427",
+  "mision": "Ofrecer cierres, herrajes e insumos de calidad para marroquinería, con atención cercana y precios justos para talleres y emprendedores.",
+  "vision": "Ser el almacén de referencia en insumos de marroquinería de nuestra región, reconocido por su variedad, cumplimiento y buen servicio.",
+  "banners": [
+    {
+      "imagen": "img/galeria/1.jpg",
+      "texto": "Cremalleras en todas las referencias"
+    },
+    {
+      "imagen": "img/galeria/2.jpg",
+      "texto": "Herrajes y deslizadores"
+    },
+    {
+      "imagen": "img/galeria/3.jpg",
+      "texto": "Todo para tu taller de marroquinería"
+    }
+  ],
+  "redes": [
+    {
+      "nombre": "Instagram",
+      "url": "https://www.instagram.com/"
+    },
+    {
+      "nombre": "Facebook",
+      "url": "https://www.facebook.com/"
+    },
+    {
+      "nombre": "TikTok",
+      "url": "https://www.tiktok.com/"
+    }
+  ],
+  "ubicacion": {
+    "direccion": "Cra. 22 #13-92, Centro, Pasto, Nariño",
+    "horario": "Lunes a Viernes: 8:00 am - 12:30 pm 2:00 pm - 6:30 pm   Sábados 8:30 am - 1:00 pm", 
+    "mapa_embed": "https://maps.app.goo.gl/vHdXvTDauz9TC9AdA"
+  }
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "cremalleras",
+    "nombre": "Cremalleras",
+    "imagen": "img/categorias/cremalleras.jpg",
+    "hijos": [
+      {
+        "id": "nylon",
+        "nombre": "Nylon",
+        "imagen": "img/categorias/cremalleranylon.jpg",
+        "hijos": [
+          {
+            "id": "eka",
+            "nombre": "Eka",
+            "logo": "img/marcas/ekalogo.jpg",
+            "archivo": "data/cremalleras/nylon/eka.json"
+          },
+          {
+            "id": "til",
+            "nombre": "Til",
+            "logo": "img/marcas/til.webp",
+            "archivo": "data/cremalleras/nylon/til.json"
+          },
+          {
+            "id": "eco",
+            "nombre": "Eco",
+            "logo": "img/marcas/eco.webp",
+            "archivo": "data/cremalleras/nylon/eco.json"
+          }
+        ]
+      },
+      {
+        "id": "metalica",
+        "nombre": "Metálica",
+        "imagen": "img/categorias/cremallerasmetal.jpg",
+        "hijos": [
+          {
+            "id": "eka",
+            "nombre": "Eka",
+            "logo": "img/marcas/eka.webp",
+            "archivo": "data/cremalleras/metalica/eka.json"
+          },
+          {
+            "id": "til",
+            "nombre": "Til",
+            "logo": "img/marcas/til.webp",
+            "archivo": "data/cremalleras/metalica/til.json"
+          },
+          {
+            "id": "eco",
+            "nombre": "Eco",
+            "logo": "img/marcas/eco.webp",
+            "archivo": "data/cremalleras/metalica/eco.json"
+          }
+        ]
+      },
+      {
+        "id": "pasta",
+        "nombre": "Pasta",
+        "imagen": "img/categorias/cremallerapasta.jpg",
+        "hijos": [
+          {
+            "id": "eka",
+            "nombre": "Eka",
+            "logo": "img/marcas/eka.webp",
+            "archivo": "data/cremalleras/pasta/eka.json"
+          },
+          {
+            "id": "til",
+            "nombre": "Til",
+            "logo": "img/marcas/til.webp",
+            "archivo": "data/cremalleras/pasta/til.json"
+          },
+          {
+            "id": "eco",
+            "nombre": "Eco",
+            "logo": "img/marcas/eco.webp",
+            "archivo": "data/cremalleras/pasta/eco.json"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deslizadores",
+    "nombre": "Deslizadores",
+    "imagen": "img/categorias/deslizadores.jpg",
+    "hijos": [
+      {
+        "id": "nylon",
+        "nombre": "Nylon",
+        "archivo": "data/deslizadores/nylon/general.json"
+      },
+      {
+        "id": "metalico",
+        "nombre": "Metálico",
+        "archivo": "data/deslizadores/metalico/general.json"
+      },
+      {
+        "id": "pasta",
+        "nombre": "Pasta",
+        "archivo": "data/deslizadores/pasta/general.json"
+      }
+    ]
+  },
+  {
+    "id": "herrajes",
+    "nombre": "Herrajes",
+    "imagen": "img/categorias/herrajes.jpg",
+    "archivo": "data/herrajes/general.json"
+  },
+  {
+    "id": "telas",
+    "nombre": "Telas",
+    "imagen": "img/categorias/telas.jpg",
+    "archivo": "data/telas/general.json"
+  },
+  {
+    "id": "herramientas",
+    "nombre": "Herramientas",
+    "imagen": "img/categorias/herramientas.jpg",
+    "archivo": "data/herramientas/general.json"
+  },
+  {
+    "id": "reatas",
+    "nombre": "Reatas",
+    "imagen": "img/categorias/reatas.jpg",
+    "archivo": "data/reatas/general.json"
+  },
+  {
+    "id": "cintas",
+    "nombre": "Cintas",
+    "imagen": "img/categorias/cintas.jpg",
+    "archivo": "data/cintas/general.json"
+  },
+  {
+    "id": "tintas",
+    "nombre": "Tintas",
+    "imagen": "img/categorias/tintas.jpg",
+    "archivo": "data/tintas/general.json"
+  }
+]

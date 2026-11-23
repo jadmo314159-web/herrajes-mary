@@ -1,0 +1,164 @@
+[
+ {
+  "titulo": "Cremalleras",
+  "texto": "",
+  "camino": "Catálogo",
+  "ruta": "cremalleras"
+ },
+ {
+  "titulo": "Nylon",
+  "texto": "",
+  "camino": "Cremalleras",
+  "ruta": "cremalleras/nylon"
+ },
+ {
+  "titulo": "Eka",
+  "texto": "",
+  "camino": "Cremalleras › Nylon",
+  "ruta": "cremalleras/nylon/eka"
+ },
+ {
+  "titulo": "Cremallera nylon Eka #3",
+  "texto": "Texto de ejemplo: reemplázalo por la descripción real de esta referencia. 3",
+  "camino": "Cremalleras › Nylon › Eka",
+  "ruta": "cremalleras/nylon/eka/eka-nylon-3"
+ },
+ {
+  "titulo": "Cremallera nylon Eka #6",
+  "texto": "Texto de ejemplo: reemplázalo por la descripción real de esta referencia. 6",
+  "camino": "Cremalleras › Nylon › Eka",
+  "ruta": "cremalleras/nylon/eka/eka-nylon-6"
+ },
+ {
+  "titulo": "Cremallera nylon Eka #8",
+  "texto": "Texto de ejemplo: reemplázalo por la descripción real de esta referencia. 8",
+  "camino": "Cremalleras › Nylon › Eka",
+  "ruta": "cremalleras/nylon/eka/eka-nylon-8"
+ },
+ {
+  "titulo": "Cremallera nylon Eka #10",
+  "texto": "Texto de ejemplo: reemplázalo por la descripción real de esta referencia. 10",
+  "camino": "Cremalleras › Nylon › Eka",
+  "ruta": "cremalleras/nylon/eka/eka-nylon-10"
+ },
+ {
+  "titulo": "Til",
+  "texto": "",
+  "camino": "Cremalleras › Nylon",
+  "ruta": "cremalleras/nylon/til"
+ },
+ {
+  "titulo": "Eco",
+  "texto": "",
+  "camino": "Cremalleras › Nylon",
+  "ruta": "cremalleras/nylon/eco"
+ },
+ {
+  "titulo": "Metálica",
+  "texto": "",
+  "camino": "Cremalleras",
+  "ruta": "cremalleras/metalica"
+ },
+ {
+  "titulo": "Eka",
+  "texto": "",
+  "camino": "Cremalleras › Metálica",
+  "ruta": "cremalleras/metalica/eka"
+ },
+ {
+  "titulo": "Til",
+  "texto": "",
+  "camino": "Cremalleras › Metálica",
+  "ruta": "cremalleras/metalica/til"
+ },
+ {
+  "titulo": "Eco",
+  "texto": "",
+  "camino": "Cremalleras › Metálica",
+  "ruta": "cremalleras/metalica/eco"
+ },
+ {
+  "titulo": "Pasta",
+  "texto": "",
+  "camino": "Cremalleras",
+  "ruta": "cremalleras/pasta"
+ },
+ {
+  "titulo": "Eka",
+  "texto": "",
+  "camino": "Cremalleras › Pasta",
+  "ruta": "cremalleras/pasta/eka"
+ },
+ {
+  "titulo": "Til",
+  "texto": "",
+  "camino": "Cremalleras › Pasta",
+  "ruta": "cremalleras/pasta/til"
+ },
+ {
+  "titulo": "Eco",
+  "texto": "",
+  "camino": "Cremalleras › Pasta",
+  "ruta": "cremalleras/pasta/eco"
+ },
+ {
+  "titulo": "Deslizadores",
+  "texto": "",
+  "camino": "Catálogo",
+  "ruta": "deslizadores"
+ },
+ {
+  "titulo": "Nylon",
+  "texto": "",
+  "camino": "Deslizadores",
+  "ruta": "deslizadores/nylon"
+ },
+ {
+  "titulo": "Metálico",
+  "texto": "",
+  "camino": "Deslizadores",
+  "ruta": "deslizadores/metalico"
+ },
+ {
+  "titulo": "Pasta",
+  "texto": "",
+  "camino": "Deslizadores",
+  "ruta": "deslizadores/pasta"
+ },
+ {
+  "titulo": "Herrajes",
+  "texto": "",
+  "camino": "Catálogo",
+  "ruta": "herrajes"
+ },
+ {
+  "titulo": "Telas",
+  "texto": "",
+  "camino": "Catálogo",
+  "ruta": "telas"
+ },
+ {
+  "titulo": "Herramientas",
+  "texto": "",
+  "camino": "Catálogo",
+  "ruta": "herramientas"
+ },
+ {
+  "titulo": "Regatas",
+  "texto": "",
+  "camino": "Catálogo",
+  "ruta": "regatas"
+ },
+ {
+  "titulo": "Cintas",
+  "texto": "",
+  "camino": "Catálogo",
+  "ruta": "cintas"
+ },
+ {
+  "titulo": "Tintas",
+  "texto": "",
+  "camino": "Catálogo",
+  "ruta": "tintas"
+ }
+]
